@@ -1,0 +1,54 @@
+{
+  "name": "audit-app-in-ci",
+  "version": "0.0.0",
+  "private": true,
+  "description": "GitHub Action for running `audit-app` in CI",
+  "keywords": [
+    "actions",
+    "node",
+    "setup"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/G-Rath/audit-app-in-ci.git"
+  },
+  "license": "MIT",
+  "author": "Gareth Jones",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "rm -rf lib/* && tsc -p tsconfig.build.json",
+    "format": "prettier --write .",
+    "format-check": "prettier --check .",
+    "lint": "eslint . --ignore-pattern '!.eslintrc.js' --ext js,ts",
+    "package": "ncc build --source-map",
+    "test": "jest",
+    "typecheck": "ttsc -p . --noEmit"
+  },
+  "prettier": "prettier-config-ackama",
+  "dependencies": {
+    "@actions/core": "^1.2.4",
+    "audit-app": "^0.1.1"
+  },
+  "devDependencies": {
+    "@jest/types": "^26.2.0",
+    "@types/eslint": "^6.8.1",
+    "@types/jest": "^26.0.8",
+    "@types/node": "^14.0.27",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.34.0",
+    "@zeit/ncc": "^0.22.3",
+    "eslint": "^6.8.0",
+    "eslint-config-ackama": "^1.7.1",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^23.20.0",
+    "eslint-plugin-jest-formatting": "^1.2.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "jest": "^26.2.2",
+    "prettier": "^2.0.5",
+    "prettier-config-ackama": "^0.1.2",
+    "ts-jest": "^26.1.4",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
+  }
+}
