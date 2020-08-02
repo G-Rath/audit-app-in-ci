@@ -1,0 +1,11 @@
+name: 'audit-app-in-ci'
+description: 'Runs `audit-app` against your app'
+author: 'Gareth Jones'
+inputs:
+  config:
+    description: 'Path to the configuration file to load'
+    required: false
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
