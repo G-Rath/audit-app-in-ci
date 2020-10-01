@@ -26,7 +26,7 @@
   },
   "prettier": "prettier-config-ackama",
   "dependencies": {
-    "@actions/core": "^1.2.4",
+    "@actions/core": "^1.2.6",
     "audit-app": "^0.1.1"
   },
   "devDependencies": {
